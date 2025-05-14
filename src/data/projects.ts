@@ -21,7 +21,7 @@ export const projects: Project[] = [
   goal: 'Create a portfolio to showcase my skills and previous work as a full-stack developer.',
   tools: 'React, Tailwind CSS, Figma, GitHub',
   role: 'I designed and developed the full project: from layout in Figma to deployment.',
-  liveUrl: 'https://portafolio-juan.vercel.app', // ← tu enlace real aquí
+  liveUrl: 'https://portafolio-indol-sigma.vercel.app/', // ← tu enlace real aquí
   githubUrl: 'https://github.com/juanHD269/Portafolio', // ← tu repo real aquí
 }
 
