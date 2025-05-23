@@ -21,7 +21,7 @@ export default function About() {
 
       <h3 className="text-2xl font-semibold mb-4 text-white">Skills</h3>
       <div className="flex justify-center gap-12 text-5xl text-sky-200 mb-16">
-        <FaHtml5 title="HTML5" />
+        <FaHtml5 title="HTML5" /> 
         <FaJs title="JavaScript" />
         <FaJava title="Java" />
         <FaPython title="Python" />
