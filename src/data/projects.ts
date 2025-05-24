@@ -32,10 +32,10 @@ export const projects: Project[] = [
     goal: 'Explica el propósito del nuevo proyecto.',
     tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
     role: 'Tu rol en este proyecto.',
-    image: '/nuevo-proyecto.png',
+    image: '/images/card.png',
     video: '/videos/nuevo-proyecto.mp4', // opcional
-    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
-    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
+    liveUrl: 'https://examenm2.vercel.app/',
+    githubUrl: 'https://github.com/juanHD269/examenm2',
   },
 
     {
