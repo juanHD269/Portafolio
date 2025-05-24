@@ -38,14 +38,14 @@ export default function Contact() {
       >
         <input
           type="text"
-          name="user_name"
+          name="from_name"
           placeholder="Your Name"
           required
           className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
         <input
           type="email"
-          name="user_email"
+          name="reply_to"
           placeholder="Your Email"
           required
           className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
