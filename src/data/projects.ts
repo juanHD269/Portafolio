@@ -23,7 +23,44 @@ export const projects: Project[] = [
   role: 'I designed and developed the full project: from layout in Figma to deployment.',
   liveUrl: 'https://portafolio-indol-sigma.vercel.app/', // ← tu enlace real aquí
   githubUrl: 'https://github.com/juanHD269/Portafolio', // ← tu repo real aquí
-}
+},
 
-  // podés agregar más...
+  {
+    id: 'nuevo-proyecto',
+    title: 'Mi Nuevo Proyecto',
+    description: 'Descripción corta del nuevo proyecto.',
+    goal: 'Explica el propósito del nuevo proyecto.',
+    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
+    role: 'Tu rol en este proyecto.',
+    image: '/nuevo-proyecto.png',
+    video: '/videos/nuevo-proyecto.mp4', // opcional
+    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
+    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
+  },
+
+    {
+    id: 'nuevo-proyecto',
+    title: 'Mi Nuevo Proyecto',
+    description: 'Descripción corta del nuevo proyecto.',
+    goal: 'Explica el propósito del nuevo proyecto.',
+    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
+    role: 'Tu rol en este proyecto.',
+    image: '/nuevo-proyecto.png',
+    video: '/videos/nuevo-proyecto.mp4', // opcional
+    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
+    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
+  },
+
+    {
+    id: 'nuevo-proyecto',
+    title: 'Mi Nuevo Proyecto',
+    description: 'Descripción corta del nuevo proyecto.',
+    goal: 'Explica el propósito del nuevo proyecto.',
+    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
+    role: 'Tu rol en este proyecto.',
+    image: '/nuevo-proyecto.png',
+    video: '/videos/nuevo-proyecto.mp4', // opcional
+    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
+    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
+  },
 ];
