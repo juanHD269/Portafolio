@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <span className="text-xl font-bold tracking-wide">Juan M. Portfolio</span>
-        <div className="flex space-x-6 text-sm md:text-base font-medium">
+        <div className="flex items-center gap-6 text-sm md:text-base font-medium">
           {navItems.map((item) => (
             <Link key={item.name} href={item.href}>
               <span
