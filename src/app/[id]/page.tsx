@@ -13,12 +13,12 @@ export default function ProjectDetail() {
   }
 
   return (
-    <section className="min-h-screen px-6 py-20 max-w-5xl mx-auto text-center">
-      <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/20">
-        <h2 className="text-3xl font-bold text-white mb-6">{project.title}</h2>
+    <section className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto text-center">
+      <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 sm:p-10 shadow-lg border border-white/20">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">{project.title}</h2>
 
-        {/* Imagen o Video */} 
-        <div className="overflow-hidden rounded-lg mb-10">
+        {/* Imagen o Video */}
+        <div className="overflow-hidden rounded-lg mb-10 max-w-full">
           {project.video ? (
             <video
               src={project.video}
@@ -26,7 +26,7 @@ export default function ProjectDetail() {
               autoPlay
               loop
               muted
-              className="w-full h-auto rounded-md shadow-md mx-auto"
+              className="w-full max-h-[500px] rounded-md shadow-md mx-auto object-cover"
             />
           ) : (
             <Image
@@ -34,34 +34,34 @@ export default function ProjectDetail() {
               alt={project.title}
               width={1000}
               height={500}
-              className="rounded-md mx-auto hover:scale-105 transition-transform duration-500"
+              className="rounded-md mx-auto hover:scale-105 transition-transform duration-500 object-cover w-full h-auto"
             />
           )}
         </div>
-        
+
         {/* Detalles del proyecto */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-gray-300">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left text-gray-300 mb-10">
           <div>
             <h3 className="font-semibold text-white text-lg mb-2">Project Goal</h3>
-            <p className="text-sm">{project.goal}</p>
+            <p className="text-sm sm:text-base">{project.goal}</p>
           </div>
           <div>
             <h3 className="font-semibold text-white text-lg mb-2">Tools Used</h3>
-            <p className="text-sm">{project.tools}</p>
+            <p className="text-sm sm:text-base">{project.tools}</p>
           </div>
           <div>
             <h3 className="font-semibold text-white text-lg mb-2">My Role</h3>
-            <p className="text-sm">{project.role}</p>
+            <p className="text-sm sm:text-base">{project.role}</p>
           </div>
         </div>
 
         {/* Botones */}
-        <div className="flex flex-wrap justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition text-sm sm:text-base"
           >
             View Live
           </a>
@@ -69,7 +69,7 @@ export default function ProjectDetail() {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition text-sm sm:text-base"
           >
             GitHub
           </a>

@@ -28,45 +28,49 @@ export default function Contact() {
   };
 
   return (
-    <section className="px-6 py-12 max-w-2xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+    <section className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-16 max-w-3xl mx-auto text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-white">Contact Me</h2>
 
-      <form ref={form} onSubmit={sendEmail} className="space-y-4 text-left">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="space-y-4 text-left text-white"
+      >
         <input
           type="text"
           name="user_name"
           placeholder="Your Name"
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded"
+          className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
         <input
           type="email"
           name="user_email"
           placeholder="Your Email"
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded"
+          className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
         <textarea
           name="message"
           rows={5}
           placeholder="Your Message"
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded"
+          className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
         <button
           type="submit"
-          className="bg-blue-800 text-white px-6 py-2 rounded shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+          className="w-full sm:w-auto bg-blue-800 text-white px-6 py-2 rounded shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
         >
           {sent ? 'Sent!' : 'Send'}
         </button>
       </form>
 
-      <div className="flex justify-center gap-6 mt-6 text-3xl text-white [&>a]:hover:text-blue-300 transition-colors duration-200">
+      <div className="flex justify-center gap-6 mt-10 text-3xl text-white">
         <a
           href="https://www.linkedin.com/in/tu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-700"
+          className="hover:text-blue-400 transition-colors duration-200"
         >
           <FaLinkedin />
         </a>
@@ -74,13 +78,13 @@ export default function Contact() {
           href="https://github.com/juanHD269"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-700"
+          className="hover:text-blue-400 transition-colors duration-200"
         >
           <FaGithub />
         </a>
         <a
           href="mailto:juanmiguelhernandezdelgado88@gmail.com"
-          className="hover:text-blue-700"
+          className="hover:text-blue-400 transition-colors duration-200"
         >
           <FaEnvelope />
         </a>
