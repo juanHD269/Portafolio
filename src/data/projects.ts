@@ -26,14 +26,14 @@ export const projects: Project[] = [
 },
 
   {
-    id: 'nuevo-proyecto',
-    title: 'Mi Nuevo Proyecto',
-    description: 'Descripción corta del nuevo proyecto.',
-    goal: 'Explica el propósito del nuevo proyecto.',
-    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
-    role: 'Tu rol en este proyecto.',
+    id: 'card-ui-tailwind',
+    title: 'Card UI Challenge',
+    description: 'Replication of a professional-looking card using Tailwind CSS.',
+    goal: 'Accurately recreate a graphical user interface card as part of a technical UI skills test.',
+    tools: 'Tailwind CSS, TypeScript, HTML',
+    role: 'I designed and developed the entire interface from scratch, ensuring visual fidelity to the original design.',
     image: '/images/card.png',
-    video: '/videos/nuevo-proyecto.mp4', // opcional
+    video: '/video/card.mp4', // opcional
     liveUrl: 'https://examenm2.vercel.app/',
     githubUrl: 'https://github.com/juanHD269/examenm2',
   },
