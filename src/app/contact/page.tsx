@@ -3,12 +3,14 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import Toast from '../components/Toast'; // Asegúrate de que la ruta sea correcta
 
 export default function Contact() {
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef(null);
   const [sent, setSent] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     if (!form.current) return;
@@ -22,7 +24,9 @@ export default function Contact() {
       )
       .then(() => {
         setSent(true);
-        form.current?.reset();
+        setShowToast(true);
+        form.current.reset();
+        setTimeout(() => setShowToast(false), 4000);
       })
       .catch((err) => console.error(err));
   };
@@ -89,6 +93,8 @@ export default function Contact() {
           <FaEnvelope />
         </a>
       </div>
+
+      {showToast && <Toast message="✅ Message sent successfully!" />}
     </section>
   );
 }
