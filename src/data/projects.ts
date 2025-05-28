@@ -52,7 +52,7 @@ export const projects: Project[] = [
   },
 
     {
-    id: 'nuevo-proyecto',
+    id: 'nuevo-proyect',
     title: 'Mi Nuevo Proyecto',
     description: 'Descripción corta del nuevo proyecto.',
     goal: 'Explica el propósito del nuevo proyecto.',

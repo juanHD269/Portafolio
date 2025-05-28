@@ -3,14 +3,12 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import Toast from '../components/Toast'; // Asegúrate de que la ruta sea correcta
 
 export default function Contact() {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
   const [sent, setSent] = useState(false);
-  const [showToast, setShowToast] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!form.current) return;
@@ -24,9 +22,8 @@ export default function Contact() {
       )
       .then(() => {
         setSent(true);
-        setShowToast(true);
-        form.current.reset();
-        setTimeout(() => setShowToast(false), 4000);
+        form.current?.reset();
+        setTimeout(() => setSent(false), 3000); // Oculta el mensaje después de 3s
       })
       .catch((err) => console.error(err));
   };
@@ -65,8 +62,15 @@ export default function Contact() {
           type="submit"
           className="w-full sm:w-auto bg-blue-800 text-white px-6 py-2 rounded shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
         >
-          {sent ? 'Sent!' : 'Send'}
+          Send
         </button>
+
+        {/* ✅ Mensaje visual de confirmación */}
+        {sent && (
+          <p className="mt-4 text-green-400 text-sm animate-pulse">
+            Message sent successfully!
+          </p>
+        )}
       </form>
 
       <div className="flex justify-center gap-6 mt-10 text-3xl text-white">
@@ -93,8 +97,6 @@ export default function Contact() {
           <FaEnvelope />
         </a>
       </div>
-
-      {showToast && <Toast message="✅ Message sent successfully!" />}
     </section>
   );
 }
