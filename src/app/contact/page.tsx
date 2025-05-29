@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -23,19 +24,34 @@ export default function Contact() {
       .then(() => {
         setSent(true);
         form.current?.reset();
-        setTimeout(() => setSent(false), 3000); // Oculta el mensaje después de 3s
+        setTimeout(() => setSent(false), 3000);
       })
       .catch((err) => console.error(err));
   };
 
   return (
-    <section className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-16 max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-white">Contact Me</h2>
+    <motion.section
+      className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-16 max-w-3xl mx-auto text-center"
+      initial={{ opacity: 0, y: 80 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: 'easeOut' }}
+    >
+      <motion.h2
+        className="text-3xl sm:text-4xl font-bold mb-10 text-white"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.7 }}
+      >
+        Contact Me
+      </motion.h2>
 
-      <form
+      <motion.form
         ref={form}
         onSubmit={sendEmail}
         className="space-y-4 text-left text-white"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
       >
         <input
           type="text"
@@ -65,15 +81,19 @@ export default function Contact() {
           Send
         </button>
 
-        {/* ✅ Mensaje visual de confirmación */}
         {sent && (
           <p className="mt-4 text-green-400 text-sm animate-pulse">
             Message sent successfully!
           </p>
         )}
-      </form>
+      </motion.form>
 
-      <div className="flex justify-center gap-6 mt-10 text-3xl text-white">
+      <motion.div
+        className="flex justify-center gap-6 mt-10 text-3xl text-white"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+      >
         <a
           href="https://www.linkedin.com/in/tu-usuario"
           target="_blank"
@@ -96,7 +116,7 @@ export default function Contact() {
         >
           <FaEnvelope />
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

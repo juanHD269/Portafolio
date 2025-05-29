@@ -38,29 +38,16 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/juanHD269/examenm2',
   },
 
-    {
-    id: 'nuevo-proyecto',
-    title: 'Mi Nuevo Proyecto',
-    description: 'Descripción corta del nuevo proyecto.',
-    goal: 'Explica el propósito del nuevo proyecto.',
-    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
-    role: 'Tu rol en este proyecto.',
-    image: '/nuevo-proyecto.png',
-    video: '/videos/nuevo-proyecto.mp4', // opcional
-    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
-    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
-  },
-
-    {
-    id: 'nuevo-proyect',
-    title: 'Mi Nuevo Proyecto',
-    description: 'Descripción corta del nuevo proyecto.',
-    goal: 'Explica el propósito del nuevo proyecto.',
-    tools: 'Tecnologías usadas como JavaScript, Node.js, etc.',
-    role: 'Tu rol en este proyecto.',
-    image: '/nuevo-proyecto.png',
-    video: '/videos/nuevo-proyecto.mp4', // opcional
-    liveUrl: 'https://mi-nuevo-proyecto.vercel.app',
-    githubUrl: 'https://github.com/juanHD269/nuevo-proyecto',
+  {
+    id: 'coming soon',
+    title: 'Coming soon',
+    description: 'This space is reserved for future projects Im developing.',
+    goal: 'Share new developments that reflect my evolution as a full-stack developer.',
+    tools: 'Technologies to be defined based on the focus of the next project.',
+    role: 'Will be defined based on the type of project and collaboration.',
+    image: '/images/Future.png', // You can use a generic image
+    video: '', // No video yet
+    liveUrl: '#',
+    githubUrl: '#',
   },
 ];
