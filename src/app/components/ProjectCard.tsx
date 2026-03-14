@@ -29,18 +29,18 @@ export default function ProjectCard({ project }: Props) {
           <p className="text-gray-300 text-sm mt-1 mb-4">{project.description}</p>
         </div>
 
-        <Link href={isPlaceholder ? '#' : `/${project.id}`}>
-          <button
-            disabled={isPlaceholder}
-            className={`px-5 py-2 rounded text-sm sm:text-base transition duration-200 ${
-              isPlaceholder
-                ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
-                : 'bg-blue-800 text-white hover:bg-blue-700'
-            }`}
+        {isPlaceholder ? (
+          <span className="px-5 py-2 rounded text-sm sm:text-base bg-gray-600 text-gray-300 cursor-not-allowed">
+            Coming Soon
+          </span>
+        ) : (
+          <Link
+            href={`/${project.id}`}
+            className="px-5 py-2 rounded text-sm sm:text-base bg-blue-800 text-white hover:bg-blue-700 transition duration-200"
           >
-            {isPlaceholder ? 'Coming Soon' : 'View More'}
-          </button>
-        </Link>
+            View More
+          </Link>
+        )}
       </div>
     </div>
   );

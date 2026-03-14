@@ -53,20 +53,23 @@ export default function Home() {
         transition={{ delay: 1.4, duration: 0.7 }}
         className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mt-4"
       >
-        <Link href="/about">
-          <button className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition">
-            About Me
-          </button>
+        <Link
+          href="/about"
+          className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition"
+        >
+          About Me
         </Link>
-        <Link href="/projects">
-          <button className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition">
-            View Projects
-          </button>
+        <Link
+          href="/projects"
+          className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition"
+        >
+          View Projects
         </Link>
-        <Link href="/contact">
-          <button className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition">
-            Contact Me
-          </button>
+        <Link
+          href="/contact"
+          className="bg-blue-800 text-white px-6 py-2 rounded text-sm sm:text-base hover:bg-blue-700 transition"
+        >
+          Contact Me
         </Link>
       </motion.div>
     </motion.section>

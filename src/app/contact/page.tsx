@@ -57,6 +57,7 @@ export default function Contact() {
           type="text"
           name="from_name"
           placeholder="Your Name"
+          aria-label="Your Name"
           required
           className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
@@ -64,6 +65,7 @@ export default function Contact() {
           type="email"
           name="reply_to"
           placeholder="Your Email"
+          aria-label="Your Email"
           required
           className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
@@ -71,6 +73,7 @@ export default function Contact() {
           name="message"
           rows={5}
           placeholder="Your Message"
+          aria-label="Your Message"
           required
           className="w-full px-4 py-2 border border-gray-300 bg-white text-black rounded text-sm sm:text-base"
         />
@@ -99,6 +102,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400 transition-colors duration-200"
+          aria-label="LinkedIn Profile"
         >
           <FaLinkedin />
         </a>
@@ -107,12 +111,14 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400 transition-colors duration-200"
+          aria-label="GitHub Profile"
         >
           <FaGithub />
         </a>
         <a
           href="mailto:juanmiguelhernandezdelgado88@gmail.com"
           className="hover:text-blue-400 transition-colors duration-200"
+          aria-label="Email Me"
         >
           <FaEnvelope />
         </a>
