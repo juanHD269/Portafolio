@@ -21,7 +21,7 @@ export default function Home() {
       >
         <Image
           src="/avatar.png"
-          alt="Juan Miguel"
+          alt="Foto de perfil de Juan Miguel"
           width={160}
           height={160}
           className="object-cover w-full h-full"
